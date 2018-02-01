@@ -19,7 +19,7 @@ public enum Ranks {
     Paladin("Paladin", "§aPALADIN §f", 3),
     Donator("Donator", "§eDONATOR §f", 2),
 
-    Member("Member", "§7", 1);
+    DEFAULT("Default", "§7", 1);
 
     private String humanReadable, prefix;
     private int rankNumber;

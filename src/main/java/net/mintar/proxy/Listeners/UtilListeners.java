@@ -1,7 +1,9 @@
 package net.mintar.proxy.Listeners;
 
 import net.md_5.bungee.api.ProxyServer;
+import net.md_5.bungee.api.ServerPing;
 import net.md_5.bungee.api.chat.TextComponent;
+import net.md_5.bungee.api.event.ProxyPingEvent;
 import net.md_5.bungee.api.event.ServerConnectedEvent;
 import net.md_5.bungee.api.event.ServerDisconnectEvent;
 import net.md_5.bungee.api.plugin.Listener;
@@ -64,6 +66,11 @@ public class UtilListeners implements Listener {
                 MainClass.Trainees.remove(e.getPlayer());
             }
         }
+    }
+
+    @EventHandler
+    public void onPing(ProxyPingEvent e){
+        e.getResponse().setDescriptionComponent(new TextComponent("§c    §3         §b§m---§8§m[§3§m-§r §3§lMintar§b§lGames §71.7-1.12 §3§m-§8§m]§b§m---§r\n    §3          §b§lALPHA v2 §8§m--§r §3§l75% Sale §b§lNOW ON!"));
     }
 
 }
