@@ -1,0 +1,21 @@
+name: MintarProxy
+author: TheTARDIS2176
+version: 2.0-SNAPSHOT
+main: net.mintar.proxy.MainClass
+description:
+commands:
+  sc:
+    desciption: Staff Chat Command
+    usage: /sc <message>
+  setrank:
+    description: Rank Command
+    usage: /setrank <player> <rank>
+  stafflist:
+    description: List command
+    usage: /stafflist
+  gvanish:
+    descrption: Vanish from Staff List
+    usage: /gvanish
+  message:
+    description: Message other people on the Network!
+    usage: /msg
