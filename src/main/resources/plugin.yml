@@ -10,12 +10,24 @@ commands:
   setrank:
     description: Rank Command
     usage: /setrank <player> <rank>
-  stafflist:
+  list:
     description: List command
-    usage: /stafflist
+    usage: /list
   gvanish:
     descrption: Vanish from Staff List
     usage: /gvanish
   message:
     description: Message other people on the Network!
     usage: /msg
+  send:
+    description: Send players to another server
+    usage: /send <player> <server>
+  server:
+    description: Go to another server
+    usage: /server [server]
+  sendall:
+    description: Send all players to another server
+    usage: /sendall <server>
+  alert:
+    description: Alert the nation of... Nerds!
+    usage /alert <message>

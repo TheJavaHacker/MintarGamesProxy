@@ -11,7 +11,7 @@ import net.mintar.proxy.utils.Ranks;
 public class staffListCommand extends Command {
 
     public staffListCommand() {
-        super("stafflist");
+        super("list");
     }
 
     @Override
@@ -22,6 +22,8 @@ public class staffListCommand extends Command {
         StringBuilder adminBuilder = new StringBuilder();
         StringBuilder modBuilder = new StringBuilder();
         StringBuilder traineeBuilder = new StringBuilder();
+        StringBuilder VIPBuilder = new StringBuilder();
+        StringBuilder PartnerBuilder = new StringBuilder();
 
         for(ProxiedPlayer owners : MainClass.Owners){
             ownerBuilder.append(owners).append(", ");
@@ -41,14 +43,22 @@ public class staffListCommand extends Command {
         for(ProxiedPlayer trainees : MainClass.Trainees){
             traineeBuilder.append(trainees).append(", ");
         }
+        for(ProxiedPlayer VIPS : MainClass.VIP){
+            VIPBuilder.append(VIPS).append(", ");
+        }
+        for(ProxiedPlayer Partners : MainClass.Partner){
+            PartnerBuilder.append(Partners).append(", ");
+        }
 
-        commandSender.sendMessage(new TextComponent("§8§m-----------§r §3This is the online Staff list. §8§m------------§r"));
+        commandSender.sendMessage(new TextComponent("§8§m-----------§r §3This is the Global Player list. §8§m------------§r"));
         commandSender.sendMessage(new TextComponent(Ranks.OWNER.getPrefix() + " §8(§a" + MainClass.Owners.size() +"§8) §8» §a" + ownerBuilder));
         commandSender.sendMessage(new TextComponent(Ranks.MANAGER.getPrefix() + " §8(§a" + MainClass.Managers.size() +"§8) §8» §a" + managerBuilder));
         commandSender.sendMessage(new TextComponent(Ranks.DEVELOPER.getPrefix() + " §8(§a" + MainClass.Developers.size() + "§8) §8» §a" + devBuilder));
         commandSender.sendMessage(new TextComponent(Ranks.ADMIN.getPrefix() + " §8(§a"+ MainClass.Administrators.size() + "§8) §8» §a" + adminBuilder));
         commandSender.sendMessage(new TextComponent(Ranks.MODERATOR.getPrefix() + " §8(§a"+ MainClass.Moderators.size() +"§8) §8» §a" + modBuilder));
         commandSender.sendMessage(new TextComponent(Ranks.TRAINEE.getPrefix() + " §8(§a"+MainClass.Trainees.size()+"§8) §8» §a" + traineeBuilder));
+        commandSender.sendMessage(new TextComponent(Ranks.WELL_KNOWN.getPrefix() + "§8(§a" + MainClass.VIP.size() + "§8) » §a" + VIPBuilder));
+        commandSender.sendMessage(new TextComponent(Ranks.PARTNER.getPrefix() + "§8(§a" + MainClass.Partner.size() + "§8) » §a" + PartnerBuilder));
         commandSender.sendMessage(new TextComponent("§8§m-----------§r §3There are §b" + ProxyServer.getInstance().getOnlineCount() + "§3 players online. §8§m-----------§r"));
 
     }

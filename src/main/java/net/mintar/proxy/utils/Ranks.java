@@ -14,10 +14,10 @@ public enum Ranks {
 
     PARTNER("Partner", "§6§lPARTNER §f", 7),
     WELL_KNOWN("VIP", "§6§lWELL KNOWN §f", 6),
-    Overlord("Overlord", "§2OVERLORD §f", 5),
-    Warrior("Warrior", "§dWARRIOR §f", 4),
-    Paladin("Paladin", "§aPALADIN §f", 3),
-    Donator("Donator", "§eDONATOR §f", 2),
+    OVERLORD("Overlord", "§2OVERLORD §f", 5),
+    WARRIOR("Warrior", "§dWARRIOR §f", 4),
+    PALADIN("Paladin", "§aPALADIN §f", 3),
+    DONATOR("Donator", "§eDONATOR §f", 2),
 
     DEFAULT("Default", "§7", 1);
 

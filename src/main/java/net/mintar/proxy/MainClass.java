@@ -24,6 +24,8 @@ public class MainClass extends Plugin {
     public static ArrayList<ProxiedPlayer> Moderators = new ArrayList<>();
     public static ArrayList<ProxiedPlayer> Trainees = new ArrayList<>();
     public static ArrayList<ProxiedPlayer> staffListVanish = new ArrayList<>();
+    public static ArrayList<ProxiedPlayer> VIP = new ArrayList<>();
+    public static ArrayList<ProxiedPlayer> Partner = new ArrayList<>();
 
 
     @Override
@@ -34,6 +36,10 @@ public class MainClass extends Plugin {
         getProxy().getPluginManager().registerCommand(this, new staffListCommand());
         getProxy().getPluginManager().registerCommand(this, new gVanishCommand());
         getProxy().getPluginManager().registerCommand(this, new gMessageCommand());
+        getProxy().getPluginManager().registerCommand(this, new serverCommand());
+        getProxy().getPluginManager().registerCommand(this, new sendCommand());
+        getProxy().getPluginManager().registerCommand(this, new sendAllCommand());
+        getProxy().getPluginManager().registerCommand(this, new alertsCommand());
         plugin = this;
 
         host = "uberstudioshd.com";

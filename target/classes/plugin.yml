@@ -10,9 +10,9 @@ commands:
   setrank:
     description: Rank Command
     usage: /setrank <player> <rank>
-  stafflist:
+  list:
     description: List command
-    usage: /stafflist
+    usage: /list
   gvanish:
     descrption: Vanish from Staff List
     usage: /gvanish

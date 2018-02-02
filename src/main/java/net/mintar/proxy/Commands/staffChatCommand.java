@@ -29,7 +29,7 @@ public class staffChatCommand extends Command {
                             for(int i = 0; i < args.length; i++){
                                 builder.append(args[i]).append(" ");
                             }
-                            staff.sendMessage(new TextComponent(ChatColor.translateAlternateColorCodes('&', "&8&l[&c&lSTAFF&8&l] " + player.getDisplayName() + " &8» &e" + builder)));
+                            staff.sendMessage(new TextComponent(ChatColor.translateAlternateColorCodes('&', "&3&lSTAFF &8&l» " + player.getDisplayName() + " &8» &e" + builder)));
                             return;
                         }
                     }
@@ -46,7 +46,7 @@ public class staffChatCommand extends Command {
                     for(int i = 0; i < args.length; i++){
                         builder.append(args[i]).append(" ");
                     }
-                    staff.sendMessage(new TextComponent(ChatColor.translateAlternateColorCodes('&', "&8&l[&c&lSTAFF&8&l] CONSOLE &8» &e" + builder)));
+                    staff.sendMessage(new TextComponent(ChatColor.translateAlternateColorCodes('&', "&3&lSTAFF &8&l» CONSOLE &8» &e" + builder)));
                     return;
                 }
             }

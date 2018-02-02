@@ -1,7 +1,6 @@
 package net.mintar.proxy.Listeners;
 
 import net.md_5.bungee.api.ProxyServer;
-import net.md_5.bungee.api.ServerPing;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.event.ProxyPingEvent;
 import net.md_5.bungee.api.event.ServerConnectedEvent;
@@ -37,6 +36,10 @@ public class UtilListeners implements Listener {
             }else if(RanksManager.getRank(e.getPlayer()) == Ranks.TRAINEE){
                 ProxyServer.getInstance().broadcast(new TextComponent("§3§lProxy §8» " + e.getPlayer().getDisplayName() + " §7has joined the server!"));
                 MainClass.Trainees.add(e.getPlayer());
+            }else if(RanksManager.getRank(e.getPlayer()) == Ranks.WELL_KNOWN){
+                MainClass.VIP.add(e.getPlayer());
+            }else if(RanksManager.getRank(e.getPlayer()) == Ranks.PARTNER) {
+                MainClass.Partner.add(e.getPlayer());
             }
         }
 
@@ -64,6 +67,10 @@ public class UtilListeners implements Listener {
             }else if(MainClass.Trainees.contains(e.getPlayer())){
                 ProxyServer.getInstance().broadcast(new TextComponent("§3§lProxy §8» " + e.getPlayer().getDisplayName() + " §7has left the server!"));
                 MainClass.Trainees.remove(e.getPlayer());
+            }else if(MainClass.VIP.contains(e.getPlayer())){
+                MainClass.VIP.remove(e.getPlayer());
+            }else if(MainClass.Partner.contains(e.getPlayer())){
+                MainClass.Partner.remove(e.getPlayer());
             }
         }
     }
