@@ -1,8 +1,5 @@
 package net.mintar.proxy.utils;
 
-import java.util.Arrays;
-import java.util.Optional;
-
 public enum Ranks {
 
     OWNER("Owner", "§4§lOWNER §4", 13),
