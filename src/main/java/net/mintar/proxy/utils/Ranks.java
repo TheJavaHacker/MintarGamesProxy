@@ -2,13 +2,14 @@ package net.mintar.proxy.utils;
 
 public enum Ranks {
 
-    OWNER("Owner", "§4§lOWNER §4", 13),
-    MANAGER("Manager", "§4§lMANAGER §4", 12),
-    DEVELOPER("Developer", "§c§lDEV §c", 11),
-    ADMIN("Admin", "§c§lADMIN §c", 10),
-    MODERATOR("Mod", "§3§lMOD §3", 9),
-    TRAINEE("Trainee", "§3§lTRAINEE §3", 8),
+    OWNER("Owner", "§4§lOWNER §4", 14),
+    MANAGER("Manager", "§4§lMANAGER §4", 13),
+    DEVELOPER("Developer", "§c§lDEV §c", 12),
+    ADMIN("Admin", "§c§lADMIN §c", 11),
+    MODERATOR("Mod", "§3§lMOD §3", 10),
+    TRAINEE("Trainee", "§3§lTRAINEE §3", 9),
 
+    YOUTUBER("YouTuber", "§6§lYT §6", 8),
     PARTNER("Partner", "§6§lPARTNER §f", 7),
     WELL_KNOWN("VIP", "§6§lWELL KNOWN §f", 6),
     OVERLORD("Overlord", "§2OVERLORD §f", 5),

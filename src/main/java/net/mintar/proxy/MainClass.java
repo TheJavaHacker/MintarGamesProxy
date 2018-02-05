@@ -7,6 +7,7 @@ import net.mintar.proxy.Listeners.UtilListeners;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -42,10 +43,10 @@ public class MainClass extends Plugin {
         getProxy().getPluginManager().registerCommand(this, new alertsCommand());
         plugin = this;
 
-        host = "uberstudioshd.com";
-        user = "uberstu1_root";
-        pass = "Meow9292CatsCatsMEOWMEoWM30WWW3eow";
-        dbname = "uberstu1_system";
+        host = "47.206.91.218";
+        user = "root";
+        pass = "MKS01db!";
+        dbname = "System";
         port = 3306;
 
         try {
@@ -54,14 +55,14 @@ public class MainClass extends Plugin {
             e.printStackTrace();
         }
 
-        /*try {
+        try {
             PreparedStatement sql = connection.prepareStatement("CREATE TABLE IF NOT EXISTS player_data(Name TEXT NOT NULL, pUUID VARCHAR(36) NOT NULL, Rank TEXT NOT NULL, Points DOUBLE NOT NULL DEFAULT 0, Levels INT NOT NULL DEFAULT 1);");
 
             sql.execute();
             sql.close();
         } catch (SQLException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     public static void openConnection() throws SQLException, ClassNotFoundException{
@@ -75,7 +76,7 @@ public class MainClass extends Plugin {
             }
 
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + dbname + "?autoReconnect=true", user, pass);
+            connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + dbname + "?autoReconnect=true&failOverReadOnly=false", user, pass);
         }
     }
 

@@ -16,8 +16,8 @@ public class RanksManager {
 
 
         try{
-            PreparedStatement sql = MainClass.connection.prepareStatement("SELECT rank FROM Core_Users WHERE username = ?;");
-            sql.setString(1, player.getName());
+            PreparedStatement sql = MainClass.connection.prepareStatement("SELECT Rank FROM player_data WHERE pUUID = ?;");
+            sql.setString(1, player.getUniqueId().toString());
 
             ResultSet set = sql.executeQuery();
             while(set.next()){
@@ -37,9 +37,9 @@ public class RanksManager {
         rank.put(player.getName(), ranks);
 
         try{
-            PreparedStatement sql = MainClass.connection.prepareStatement("UPDATE Core_Users SET rank = ? WHERE username = ?;");
+            PreparedStatement sql = MainClass.connection.prepareStatement("UPDATE player_data SET Rank = ? WHERE pUUID = ?;");
             sql.setString(1, ranks.toString());
-            sql.setString(2, player.getName());
+            sql.setString(2, player.getUniqueId().toString());
 
             sql.execute();
             sql.close();
