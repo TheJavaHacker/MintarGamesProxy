@@ -51,7 +51,7 @@ public class staffListCommand extends Command {
         }
 
         commandSender.sendMessage(new TextComponent("§8§m-----------§r §3This is the Global Player list. §8§m------------§r"));
-        commandSender.sendMessage(new TextComponent(Ranks.OWNER.getPrefix() + " §8(§a" + MainClass.Owners.size() +"§8) §8» §a" + ownerBuilder));
+        commandSender.sendMessage(new TextComponent(Ranks.FOUNDER.getPrefix() + " §8(§a" + MainClass.Owners.size() +"§8) §8» §a" + ownerBuilder));
         commandSender.sendMessage(new TextComponent(Ranks.MANAGER.getPrefix() + " §8(§a" + MainClass.Managers.size() +"§8) §8» §a" + managerBuilder));
         commandSender.sendMessage(new TextComponent(Ranks.DEVELOPER.getPrefix() + " §8(§a" + MainClass.Developers.size() + "§8) §8» §a" + devBuilder));
         commandSender.sendMessage(new TextComponent(Ranks.ADMIN.getPrefix() + " §8(§a"+ MainClass.Administrators.size() + "§8) §8» §a" + adminBuilder));

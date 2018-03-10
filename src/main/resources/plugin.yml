@@ -30,4 +30,4 @@ commands:
     usage: /sendall <server>
   alert:
     description: Alert the nation of... Nerds!
-    usage /alert <message>
+    usage: /alert <message>

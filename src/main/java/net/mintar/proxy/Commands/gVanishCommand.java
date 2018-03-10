@@ -19,7 +19,7 @@ public class gVanishCommand extends Command {
             ProxiedPlayer player = (ProxiedPlayer) commandSender;
             if(RanksManager.getRank(player).getRankNumber() >= Ranks.DEVELOPER.getRankNumber()){
                 if(MainClass.staffListVanish.contains(player)){
-                    if(RanksManager.getRank(player) == Ranks.OWNER){
+                    if(RanksManager.getRank(player) == Ranks.FOUNDER){
                         MainClass.Owners.add(player);
                     }else if(RanksManager.getRank(player) == Ranks.MANAGER){
                         MainClass.Managers.add(player);

@@ -2,7 +2,7 @@ package net.mintar.proxy.utils;
 
 public enum Ranks {
 
-    OWNER("Owner", "§4§lOWNER §4", 14),
+    FOUNDER("Owner", "§4§lOWNER §4", 14),
     MANAGER("Manager", "§4§lMANAGER §4", 13),
     DEVELOPER("Developer", "§c§lDEV §c", 12),
     ADMIN("Admin", "§c§lADMIN §c", 11),

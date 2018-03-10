@@ -18,7 +18,7 @@ public class UtilListeners implements Listener {
         RanksManager.getRank(e.getPlayer());
         e.getPlayer().setTabHeader(new TextComponent("§3§lMINTAR§b§lGAMES.\n§c§lBETA! §8§l(Report bugs on the forums!)§r"), new TextComponent("§7Visit §b§lwww.mintar.net §7to see our store, forums and more!§r"));
         if(!MainClass.staffListVanish.contains(e.getPlayer())){
-            if(RanksManager.getRank(e.getPlayer()) == Ranks.OWNER){
+            if(RanksManager.getRank(e.getPlayer()) == Ranks.FOUNDER){
                 ProxyServer.getInstance().broadcast(new TextComponent("§3§lProxy §8» " + e.getPlayer().getDisplayName() + " §7has joined the server!"));
                 MainClass.Owners.add(e.getPlayer());
             }else if(RanksManager.getRank(e.getPlayer()) == Ranks.MANAGER){
