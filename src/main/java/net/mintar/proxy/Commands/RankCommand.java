@@ -42,7 +42,7 @@ public class RankCommand extends Command {
                         RanksManager.setRank(target, ranks);
                         System.out.println("Set Rank via Method");
                         for(ProxiedPlayer staff : ProxyServer.getInstance().getPlayers()){
-                            if(RanksManager.getRank(staff).getRankNumber() >= Ranks.TRAINEE.getRankNumber()){
+                            if(RanksManager.getRank(staff).getRankNumber() >= Ranks.TRIAL.getRankNumber()){
                                 staff.sendMessage(new TextComponent("§3§lRANKS §8» §bCONSOLE §7 has set §e" + target.getName() + "§7 to the " + ranks.getPrefix() + "§7rank."));
                                 System.out.println("Sent Staff Messages");
                             }
@@ -80,7 +80,7 @@ public class RankCommand extends Command {
                             RanksManager.setRank(target, ranks);
                             System.out.println("Set Rank via Method");
                             for(ProxiedPlayer staff : ProxyServer.getInstance().getPlayers()){
-                                if(RanksManager.getRank(staff).getRankNumber() >= Ranks.TRAINEE.getRankNumber()){
+                                if(RanksManager.getRank(staff).getRankNumber() >= Ranks.TRIAL.getRankNumber()){
                                     staff.sendMessage(new TextComponent("§3§lRANKS §8» §c" + player.getDisplayName() + "§7 has set §e" + target.getName() + "§7 to the " + ranks.getPrefix() + "§7rank."));
                                     System.out.println("Sent Staff Messages");
                                 }

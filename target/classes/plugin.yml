@@ -19,3 +19,15 @@ commands:
   message:
     description: Message other people on the Network!
     usage: /msg
+  send:
+    description: Send players to another server
+    usage: /send <player> <server>
+  server:
+    description: Go to another server
+    usage: /server [server]
+  sendall:
+    description: Send all players to another server
+    usage: /sendall <server>
+  alert:
+    description: Alert the nation of... Nerds!
+    usage: /alert <message>

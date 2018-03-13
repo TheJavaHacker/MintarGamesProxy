@@ -29,7 +29,7 @@ public class gVanishCommand extends Command {
                         MainClass.Administrators.add(player);
                     }else if(RanksManager.getRank(player) == Ranks.MODERATOR){
                         MainClass.Moderators.add(player);
-                    }else if(RanksManager.getRank(player) == Ranks.TRAINEE){
+                    }else if(RanksManager.getRank(player) == Ranks.TRIAL){
                         MainClass.Trainees.add(player);
                     }
                     MainClass.staffListVanish.remove(player);

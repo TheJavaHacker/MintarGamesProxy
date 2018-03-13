@@ -33,7 +33,7 @@ public class UtilListeners implements Listener {
             }else if(RanksManager.getRank(e.getPlayer()) == Ranks.MODERATOR){
                 ProxyServer.getInstance().broadcast(new TextComponent("§3§lProxy §8» " + e.getPlayer().getDisplayName() + " §7has joined the server!"));
                 MainClass.Moderators.add(e.getPlayer());
-            }else if(RanksManager.getRank(e.getPlayer()) == Ranks.TRAINEE){
+            }else if(RanksManager.getRank(e.getPlayer()) == Ranks.TRIAL){
                 ProxyServer.getInstance().broadcast(new TextComponent("§3§lProxy §8» " + e.getPlayer().getDisplayName() + " §7has joined the server!"));
                 MainClass.Trainees.add(e.getPlayer());
             }else if(RanksManager.getRank(e.getPlayer()) == Ranks.WELL_KNOWN){

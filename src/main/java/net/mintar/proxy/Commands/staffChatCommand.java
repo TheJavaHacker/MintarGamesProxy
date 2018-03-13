@@ -18,13 +18,13 @@ public class staffChatCommand extends Command {
     public void execute(CommandSender sender, String[] args){
         if(sender instanceof ProxiedPlayer){
             ProxiedPlayer player = (ProxiedPlayer) sender;
-            if(RanksManager.getRank(player).getRankNumber() >= Ranks.TRAINEE.getRankNumber()){
+            if(RanksManager.getRank(player).getRankNumber() >= Ranks.TRIAL.getRankNumber()){
                 if(args.length < 1){
                     player.sendMessage(new TextComponent("§3§lProxyCore §8» §cYou're missing any kind of message."));
                     return;
                 }else{
                     for(ProxiedPlayer staff : ProxyServer.getInstance().getPlayers()){
-                        if(RanksManager.getRank(staff).getRankNumber() >= Ranks.TRAINEE.getRankNumber()){
+                        if(RanksManager.getRank(staff).getRankNumber() >= Ranks.TRIAL.getRankNumber()){
                             StringBuilder builder = new StringBuilder();
                             for(int i = 0; i < args.length; i++){
                                 builder.append(args[i]).append(" ");
@@ -41,7 +41,7 @@ public class staffChatCommand extends Command {
             }
         }else{
             for(ProxiedPlayer staff : ProxyServer.getInstance().getPlayers()){
-                if(RanksManager.getRank(staff).getRankNumber() >= Ranks.TRAINEE.getRankNumber()){
+                if(RanksManager.getRank(staff).getRankNumber() >= Ranks.TRIAL.getRankNumber()){
                     StringBuilder builder = new StringBuilder();
                     for(int i = 0; i < args.length; i++){
                         builder.append(args[i]).append(" ");

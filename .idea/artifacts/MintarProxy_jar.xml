@@ -1,10 +1,9 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="MintarProxy.jar">
-    <output-path>$USER_HOME$/Documents/Clients &amp; Private/Arctic/MintarGames/BungeeCord/plugins</output-path>
+    <output-path>$USER_HOME$/Desktop</output-path>
     <root id="archive" name="MintarProxy.jar">
       <element id="module-output" name="MintarProxy" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/2.7.6/HikariCP-2.7.6.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
