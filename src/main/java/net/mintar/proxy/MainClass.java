@@ -43,10 +43,10 @@ public class MainClass extends Plugin {
         getProxy().getPluginManager().registerCommand(this, new alertsCommand());
         plugin = this;
 
-        host = "47.206.91.218";
-        user = "root";
-        pass = "MKS01db!";
-        dbname = "System";
+        host = "";
+        user = "";
+        pass = "";
+        dbname = "";
         port = 3306;
 
         try {
